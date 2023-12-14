@@ -1,0 +1,31 @@
+package com.ncdc.nise.data.model.spaceavilability
+
+data class SpaceAvilableData(
+    val accessRoof: String,
+    val availableEarthing: String,
+    val construction: String,
+    val createdDate: String,
+    val econdition: String,
+    val freeAreaRoof: String,
+    val generalShape: String,
+    val id: String,
+    val installationLocation: String,
+    val laInstallation: String,
+    val obstruction: String,
+    val obstructions: String,
+    val openGround: String,
+    val orientation: String,
+    val tiltAngle: String,
+    val roofCondition: String,
+    val roofMaterial: String,
+    val saCpu: String,
+    val secureStorage: String,
+    val solarPVSystem: String,
+    val spaceToHost: String,
+    val supportCondition: String,
+    val theftATSite: String,
+    val totalArea: String,
+    val totalShadow: String,
+    val typeOfRoof: String,
+    val weightRestrictions: String
+)

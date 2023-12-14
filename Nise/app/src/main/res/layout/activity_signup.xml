@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/rootView"
+
+    android:layout_height="match_parent">
+    <ProgressBar
+        style="@android:style/Widget.Holo.ProgressBar.Large"
+        android:id="@+id/progressBar"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/purple_200"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:visibility="gone" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_centerInParent="true"
+        app:cardBackgroundColor="@color/white"
+        android:layout_margin="@dimen/dimen_5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/heding_log"/>
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                fontPath="@string/font_bold"
+                android:gravity="center"
+                android:text="Energy Assessment Under National \n Program On Climate &amp; Human Health"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                tools:ignore="MissingPrefix"/>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textView"
+            android:id="@+id/llSignup"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Surveyor Details"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    fontPath="@string/font_bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="@string/create_account"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_marginBottom="10dp"
+                    android:textDirection="locale"
+                    android:textAlignment="viewStart"
+                    tools:ignore="MissingPrefix" />
+
+                <EditText
+                    android:id="@+id/sName"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:background="@drawable/bg_border_rectangle"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:hint="@string/surveyor_name"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:paddingEnd="@dimen/dimen_10dp"
+                    android:textSize="@dimen/text_size_14sp"/>
+
+
+               <!-- <com.google.android.material.textfield.TextInputLayout
+
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="7dp"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="50"
+                    app:endIconMode="clear_text"
+                    android:hint="@string/surveyor_name"
+                    app:startIconContentDescription="@string/surveyor_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <EditText
+                    android:id="@+id/edEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:background="@drawable/bg_border_rectangle"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:hint="@string/email"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:inputType="textEmailAddress"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:paddingEnd="@dimen/dimen_10dp"
+                    android:textSize="@dimen/text_size_14sp"/>
+               <!-- <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/edEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="7dp"
+                    app:endIconMode="clear_text"
+                    android:hint="@string/email"
+                    app:startIconContentDescription="@string/email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+                <EditText
+                    android:id="@+id/sDesignation"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:background="@drawable/bg_border_rectangle"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:hint="@string/designation_of_the_surveyor"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:singleLine="true"
+                    android:imeOptions="actionNext"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:paddingEnd="@dimen/dimen_10dp"
+                    android:textSize="@dimen/text_size_14sp"/>
+              <!--  <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sDesignation"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="7dp"
+                    app:endIconMode="clear_text"
+                    android:hint="@string/designation_of_the_surveyor"
+                    app:startIconContentDescription="@string/designation_of_the_surveyor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+                <EditText
+                    android:id="@+id/sOrganisation"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:background="@drawable/bg_border_rectangle"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:hint="@string/orgnatisation_name"
+                    android:textColorHint="@color/black"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:imeOptions="actionNext"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:paddingEnd="@dimen/dimen_10dp"
+                    android:textSize="@dimen/text_size_14sp"/>
+               <!-- <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sOrganisation"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="7dp"
+                    app:endIconMode="clear_text"
+                    android:hint="@string/orgnatisation_name"
+                    app:startIconContentDescription="@string/orgnatisation_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+                <EditText
+                    android:id="@+id/sContactNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:background="@drawable/bg_border_rectangle"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:hint="@string/surveyor_contact_no"
+                    android:textColorHint="@color/black"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:maxLength="10"
+                    android:inputType="phone"
+                    android:imeOptions="actionNext"
+                    android:textAlignment="viewStart"
+                    android:textDirection="locale"
+                    android:paddingStart="@dimen/dimen_10dp"
+                    android:paddingEnd="@dimen/dimen_10dp"
+                    android:textSize="@dimen/text_size_14sp"/>
+               <!-- <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/sContactNo"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="7dp"
+                    app:endIconMode="clear_text"
+                    android:hint="@string/surveyor_contact_no"
+                    app:startIconContentDescription="@string/surveyor_contact_no">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        android:inputType="phone" />
+
+                </com.google.android.material.textfield.TextInputLayout>-->
+
+
+
+                <LinearLayout
+                    android:id="@+id/llCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbCheck"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:buttonTint="@color/black"
+                        android:gravity="center" />
+
+                    <TextView
+                        android:id="@+id/tvTermsAndCondition"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="10dp"
+                        android:gravity="center_vertical|start"
+                        android:textDirection="locale"
+                        android:textAlignment="viewStart"
+                        android:text="@string/i_accept_the_terms_amp_conditions"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvSignUp"
+                    fontPath="@string/font_semibold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@drawable/bg_green_corner_10"
+                    android:gravity="center_horizontal"
+                    android:padding="10dp"
+                    android:text="Signup"
+                    android:textDirection="locale"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"
+                    tools:ignore="MissingPrefix" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    fontPath="@string/font_regular"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="2dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="@string/already_have_an_account"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textDirection="locale"
+                    android:textAlignment="center"
+                    tools:ignore="MissingPrefix" />
+
+                <TextView
+                    android:id="@+id/tvLogin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="2dp"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:textDirection="locale"
+                    android:textAlignment="center"
+                    android:text="@string/login"
+                    android:paddingBottom="@dimen/dimen_10dp"
+                    android:paddingTop="@dimen/dimen_10dp"
+                    android:paddingRight="@dimen/dimen_10dp"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"/>
+
+        </RelativeLayout>
+        </ScrollView>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+</RelativeLayout>

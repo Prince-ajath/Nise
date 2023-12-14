@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.Holo.ProgressBar.Large"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                android:indeterminateTint="@color/purple_200"
+                android:visibility="gone" />
+
+          <!--  <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/back_gray"
+                android:orientation="vertical"
+                android:padding="10dp">-->
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:background="@color/back_gray"
+                    android:layout_alignParentTop="true"
+                    android:padding="10dp"
+                    android:text="@string/photographs"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvUploadFront"
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"
+                    app:cardBackgroundColor="@color/white"
+                    android:padding="16dp"
+                    android:layout_below="@+id/text"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/bg_dotted_green_stroke"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llUploadFront"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@drawable/bg_blue_stroke_circle"
+                                android:paddingStart="34dp"
+                                android:paddingTop="14dp"
+                                android:paddingEnd="32dp"
+                                android:src="@drawable/ic_document" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/upload_document_image"
+                                android:textColor="@color/blue_color"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/image_should_be_in_jpeg"
+                                android:textColor="@color/colorGray"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/cvUploadFront"
+                    android:layout_margin="10dp" />
+
+                <TextView
+                    android:id="@+id/tvUpload"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dimen_10dp"
+                    android:background="@drawable/bg_green_corner_10"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/dimen_10dp"
+                    android:layout_alignParentBottom="true"
+                    android:text="UPLOAD"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textDirection="locale"
+                    android:textSize="16sp" />
+
+
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</RelativeLayout>

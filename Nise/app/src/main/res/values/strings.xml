@@ -1,0 +1,305 @@
+<resources>
+
+
+    <string name="font_regular">fonts/Poppins-Regular.ttf</string>
+    <string name="font_medium">fonts/Poppins-Medium.ttf</string>
+    <string name="font_bold">fonts/Poppins-Bold.ttf</string>
+    <string name="font_black">fonts/Poppins-Black.ttf</string>
+    <string name="font_semibold">fonts/Poppins-SemiBold.ttf</string>
+    <string name="font_thin">fonts/Poppins-SemiBold.ttf</string>
+    <string name="font_light">fonts/Poppins-Light.ttf</string>
+    <string name="font_extrabold">fonts/Poppins-ExtraBold.ttf</string>
+
+
+    <string name="app_name">NPCCHH</string>
+    <string name="login">Login</string>
+    <string name="next">Next</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="signup">Signup</string>
+    <string name="welcome">Welcome</string>
+    <string name="confirm_logout">Are you sure you wanted to logout?</string>
+    <string name="confirmation_email">Surveyor Details Is Submitted Successfully And Login Credential Send Your Email</string>
+    <string name="waiting_approval">You are not approved in admin side please wait..</string>
+    <string name="no_internet" translatable="false">Internet not available</string>
+    <string name="date_time_string" translatable="false">%s-%s-%s</string>
+    <string name="name_field_required" translatable="false">Surveyor Name is required</string>
+    <string name="email_field_required" translatable="false">Surveyor Email Id is valid formate</string>
+    <string name="surveyor_field_required" translatable="false">Surveyor Designation is required</string>
+    <string name="surveyor_organisation_required" translatable="false">Surveyor Organisation is required</string>
+    <string name="surveyor_Date_required" translatable="false">Survey Date is required</string>
+    <string name="surveyor_Time_required" translatable="false">Survey Time is required</string>
+    <string name="surveyor_ContactNo_required" translatable="false">Surveyor ContactNo required is valid</string>
+    <string name="surveyor_OtherInfo_required" translatable="false">Surveyor OtherInfo is required</string>
+    <string name="please_login_to_your_account">Please login to your account</string>
+    <string name="forgot_password_">Forgot Password?</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="dialog_permission_message">This app needs permission to use this feature. You can grant them in app settings.</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="i_accept_the_terms_amp_conditions"><![CDATA[I accept the terms & conditions]]></string>
+    <string name="developed_by">Designed &amp; Developed By NISE \n With Support Of UNICEF</string>
+    <string name="create_account">Create account</string>
+    <string name="signup_to_get_started">Signup to get started!</string>
+    <string name="back_btn" translatable="false">Back</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="surveyor_details">SURVEYOR DETAILS</string>
+    <string name="details_connected_load">DETAILS OF CONNECTED LOAD</string>
+    <string name="health_related_info">HEALTH RELATED INFORMATION</string>
+    <string name="vaccine_storage_details">VACCINE STORAGE DETAILS</string>
+    <string name="photographs">PHOTOGRAPHS</string>
+    <string name="surveyor_name">Surveyor Name</string>
+    <string name="designation_of_the_surveyor">Designation of the Surveyor</string>
+    <string name="orgnatisation_name">Organisation/Agency Name</string>
+    <string name="date_of_the_surveyor">Date of the Survey</string>
+    <string name="time_of_the_surveyor">Time of the Survey</string>
+    <string name="surveyor_contact_no">Surveyor Contact No.</string>
+    <string name="other_info">Other information</string>
+    <string name="details_of_health_facility">DETAILS OF HEALTH FACILITY</string>
+    <string name="electrical_parameters">ELECTRICAL PARAMETERS</string>
+    <string name="space_availability">Space Availability for Adoption of Solarization</string>
+    <string name="water_source_and_other_details">WATER SOURCE AND OTHER DETAILS</string>
+    <string name="name_of_health_facility">Name of Health facility</string>
+    <string name="health_facility_cat">Health Facility Category</string>
+    <string name="name_of_the_district">Name of the District</string>
+    <string name="name_of_the_state">Name of the State</string>
+    <string name="mobile_network_strength">Mobile network strength at the Facility</string>
+    <string name="district_cate">District Category</string>
+    <string name="address_and_loacation">Address and Location in Details</string>
+    <string name="latitude_of_site">Latitude of site</string>
+    <string name="longitude_of_site">Longitude of site</string>
+    <string name="country">Country</string>
+    <string name="pin_code">Pin Code</string>
+    <string name="name_of_the_contact_person">Name of the contact person</string>
+    <string name="emailid_of_the_conatct_person">Email Id of the contact person</string>
+    <string name="contactno_of_the_health_person">Contact No. of the contact person</string>
+    <string name="extended_working_hours">Extended Working hours if any</string>
+    <string name="logistic_facility_to_approach">Logistic Facility to approach the site</string>
+    <string name="distance_from_main_road">Distance from main road (Meter)</string>
+    <string name="approach_to_site">Approach to Site</string>
+    <string name="name_of_the_electricity_board">Name of the Electricity Board</string>
+    <string name="consumer_id">Consumer ID (if available)</string>
+    <string name="fullName_consumer">Full Name(s) on Consumer ID</string>
+    <string name="noOf_staff">Total Number of staff</string>
+
+    <string name="noOf_beds">Number of beds available</string>
+    <string name="noOf_quarters">No. of Quarters available for staff at health facility</string>
+    <string name="distanceOf_quarters">Distance of Quarters from health facility.(Meter)</string>
+    <string name="ambulance_facility">Ambulance facility available?</string>
+    <string name="drinking_water">Drinking water facility available?</string>
+    <string name="age_of_the_building">Age of the building(Years)</string>
+    <string name="major_renovation">Year of last major renovation</string>
+    <string name="number_of_floors">Number of floors(Excluding ground floor)</string>
+    <string name="muber_buildings">Number of buildings in the health facility</string>
+    <string name="temp_location">Ambient Temperature of the location(&#xb0;C)</string>
+    <string name="comercial_place">Distance from near by town(km)</string>
+
+    /////////////////////Fragement Electrical/////////////////////
+    <string name="sanctioned_load">Sanctioned Load as per the electricity bill(kVA)</string>
+    <string name="peak_load">Peak Load as per the electricity bill(kVA)</string>
+    <string name="average_electricity">Average electricity consumption in a month(kWh /month)</string>
+    <string name="availability_of_main_line">Availability of Main Line Transformer </string>
+    <string name="average_power_outage">Average Power outage in a day (Hrs. per day)</string>
+    <string name="which_is_the_primary_source_of_supply">Which is the Primary Source of Supply</string>
+    <string name="which_is_the_secondary_source_of_supply">Which is the Secondary Source of Supply</string>
+    <string name="mention_rating_in_kva">Mention Rating in KVA and Line Voltage</string>
+   <!-- <string name="list_down_the_load_Annexure_a">List down the load equipment details as per the annexure A.</string>
+    <string name="list_down_the_load_Annexure_b">List down the inputs for energy assessment as per annexure B.</string>-->
+    <string name="meter_connection_available">Meter connection available ?</string>
+    <string name="ac_volatage">AC Voltage at the facility</string>
+    <string name="scope_of_expension">Scope of expansion of the loads</string>
+    <string name="approximately_expected_load">Approximately expected load</string>
+    <string name="number_of_outdoor_lightings">Number of Outdoor lightings</string>
+    <string name="whethera_existing_solar_system">Whether a Solar system exist at site</string>
+    <string name="access_electrical">Access To Electricity</string>
+    <string name="electricity_connection">Electricity Connection</string>
+    <string name="ac_voltage_at_the_facility">AC Voltage at the facility</string>
+    <string name="scope_of_expansion_of_the_loads">Scope of expansion of the loads</string>
+    <string name="solar_system_exist_at_site">Solar PV system exist at site</string>
+    <string name="electricity_consumption">Average Electricity Consumption in Staff quarters _____ kWh</string>
+    <string name="provisions_existing">Provisions existing for separate distributed line in Health Facility ?</string>
+    <string name="scope_for_adoption">Scope for adoption of energy efficiency measures</string>
+    <string name="average_power">Average power factor (from the Bills</string>
+    <string name="distribution_boards">Number of distribution boards</string>
+    <string name="five_to_ten_mcb">Number of MCBs ( 5 to 10 A)</string>
+    <string name="ten_to_fifty_mcb">Number of MCBs ( 10A to 15 A)</string>
+    <string name="greter_twenty">Number of MCBs ( Greater than 20A ) </string>
+    <string name="condition_of_wiring">Condition of Wiring</string>
+
+    <string name="type_of_connection">Type of Connection</string>
+    <string name="single_phase">Single Phase</string>
+    <string name="three_phase">Three Phase</string>
+    <string name="elven_kv">11 KV</string>
+    <string name="thirty_three_kv">33 KV</string>
+    <string name="grid">Grid</string>
+    <string name="inverter">Inverter</string>
+    <string name="dg">DG</string>
+    <string name="ac">AC</string>
+    <string name="dc">DC</string>
+
+    /////////////>>>>>>>>>>>>>>>>>>>Space Availability for Adoption of Solarization>>>>>>>>>>>>>>>>/////////
+    <string name="approximate_shadow_building">Appx Shadow free Area Available on all roof(Sq.m)</string>
+    <string name="approximate_shadow_parking">Appx Shadow free Area on the open ground(Sq.m)</string>
+    <string name="space_to_host">space to host Inverter/battery in the facility is available?</string>
+    <string name="whether_space">Whether Space Available for Secure Storage of Material during installation time</string>
+    <string name="space_available_earthing">Space available for earthing</string>
+    <string name="space_avialable_installation">Space available for LA Installation</string>
+    <string name="space_avialable_cpu">Space available for PCU</string>
+    <string name="facing_required">Fencing required for the solar PV system (if on ground)</string>
+    <string name="risk_of_theft">Risk of theft at site ?</string>
+    <string name="installation_location">Installation Location (Building Name)</string>
+    <string name="type_of_roof">Type of Roof</string>
+    <string name="orientation_direction">Orientation of the roof(Direction)</string>
+    <string name="tilt_angle">Tilt Angle _____ degrees</string>
+    <string name="total_area_avialable">Total Area Available in Roof (Sq.m)</string>
+    <string name="total_shadow_free">Total Shadow free Area Available on the Roof (Sq.m)</string>
+    <string name="any_obstrucrions">Any obstructions on in the roof / near by</string>
+    <string name="general_shape">General shape of the roof</string>
+    <string name="access_to_the_roof">Access to the Roof</string>
+    <string name="weight_restrictions">Weight Restrictions on roof</string>
+    <string name="list_down_the">List down the obstruction details as per the annexure C.</string>
+    <string name="external_wall">External wall construction material for the building</string>
+    <string name="external_wall_condition">External wall condition</string>
+    <string name="roof_condition">Roof condition</string>
+    <string name="roof_support_condition">Roof support condition</string>
+    <string name="roof_material">Roof Material</string>
+
+    //////////>>>>>>>>>>>>>>>>>>>WATER SOURCE and OTHER DETAILS>>>>>>>>>>>>>>>>>>>>>>>>//////
+    <string name="source_of_water_for_drinking_and_other_purposes">Source of water for drinking and other purposes</string>
+    <string name="capacity_of_the_storage_tank">Capacity of the water storage tank (if available)(Liter)</string>
+    <string name="pumping_mechanism">Pumping mechanism</string>
+    <string name="capicity_and_pattern">Capacity (in Hp)</string>
+    <string name="quantity_of_water_required">Quantity of water required per day(Liter)</string>
+    <string name="quantity_of_the_water_if_avilable">Quality of the water, if available(PPM)</string>
+    <string name="depth_of_the_water_table">Depth of the water table (meters)</string>
+    <string name="distance_between_watersource_and_tank">Distance between water source and water tank.(meters)</string>
+    <string name="availabilty_of_water">Availability of Water (For PV module cleaning)</string>
+    <string name="bore_well">Bore well</string>
+    <string name="open_well">Open Well</string>
+    <string name="municipal_water">Municipal Water</string>
+    <string name="moter_pump_set">Moter Pump set</string>
+    <string name="hand_pump_set">Hand Pump set</string>
+    <string name="wattage">Wattage</string>
+    <string name="voltage">Voltage</string>
+
+    ////>>>>>>>>>>>>>>>>>>>>>>>>>>. VACCINE STORAGE DETAILS >>>>>>>>>>>>>>>>>>>>>>>///////////
+    <string name="whether_vaccine_storage_refrigerator_available">Whether Vaccine storage Refrigerator available??</string>
+    <string name="whether_in_working_condition"> Whether in working condition</string>
+    <string name="whether_vaccine_storage_refrigerator_working">Whether Vaccine storage Refrigerator working ?</string>
+    <string name="whether_the_refrigerator_is_solar_powered">Whether the Refrigerator is solar powered ?</string>
+    <string name="temperature_maintained">Temperature maintained(&#xb0;C)</string>
+    <string name="usage_pattern_frequency_of_use">Usage pattern (Hours in day)</string>
+    <string name="working">Working</string>
+    <string name="not_working">Not Working</string>
+
+   //////////>>>>>>>>>>>>>>>>>>>>HEALTH RELATED INFORMATION>>>>>>>>>>>>>>>>>>>>>>>///////////////
+    <string name="health_facility_belong">Does health facility belong to Health &amp; Wellness Center ?</string>
+    <string name="total_papulation">Total Population Catered by the Health Facility</string>
+    <string name="annual_target">Annual target infant population for current year</string>
+    <string name="annual_target_women">Annual target pregnant women</string>
+    <string name="good">Good</string>
+    <string name="poor">Poor</string>
+    <string name="aspirational_district">Aspirational District</string>
+    <string name="non_aspirational_district">Non Aspirational District</string>
+    <string name="working_hours_of_the_health">Working Hours of the health facility (Duration) in a day</string>
+    <string name="hours">Hours</string>
+    <string name="am_to">AM"</string>
+    <string name="pm">PM</string>
+    <string name="pucca_road">Pucca Road</string>
+    <string name="motorable_road">Motorable Road</string>
+    <string name="kacha_road">Kacha Road</string>
+    <string name="average_number_opd">Average number of OPD patients every month</string>
+    <string name="average_number_ipd">Average number of total IPD every month</string>
+    <string name="average_number_surgeries">Average number of surgeries conducted in a month</string>
+    <string name="average_number_deliveries">Average number of deliveries conducted in a month</string>
+    <string name="facility_provide">Does facility provide 24-hour emergency services or 24-hour labour room services?</string>
+    <string name="dose_the_facility_offer">Does the facility offer evening OPD services?</string>
+    <string name="is_anti_rabies">Is anti-rabies vaccine or the anti-snake venom available at the Health Facility PHC?</string>
+    <string name="are_low_birth">Are low birth weight babies managed at Health Facility PHC?</string>
+    <string name="is_there_fixed">Is there a fixed immunization day?</string>
+    <string name="is_blood_examination">Is blood examination for malaria/sputum examination for TB/urine examination for pregnant women done at Health Facility PHC?</string>
+    <string name="dose_the_facility_vedio_confrencing">Does the facility have tele-medicine unit or AV unit for trainings/video conferencing?</string>
+    <string name="is_blood_storage_facility">Is blood storage facility available at the facility?</string>
+    <string name="if_this_facility_cold_chain">If this facility is a cold chain point</string>
+    <string name="what_is_distance_between">what is the distance between the health facility and the farthest session site?</string>
+    <string name="what_is_time_taken">What is the time taken to deliver the vaccine to the aforementioned session site?</string>
+    <string name="number_of_ipd_overnight">Number of IPDs overnight?</string>
+
+    //////////>>>>>>>>>>>>>>>>>>>>>>PHOTOGRAPHS?????????>>>>>>>>>>>>>>>>>//////////////////
+    <string name="building_with_board">Building with Board</string>
+    <string name="electric_meter_connection">Electric meter Connection and Distribution Board (s)</string>
+    <string name="image_proposed_roof">Image of the proposed Roof / Ground Area for solar installation</string>
+    <string name="image_meter_board">Image of meter board.</string>
+    <string name="image_equipment">Image of Equipment’s noted in Annexure 1A.</string>
+    <string name="image_of_the_roof">Image of the Roof</string>
+    <string name="electricity_bill">Electricity Bill copy of last 3 months (if grid is av,)</string>
+    <string name="location_google_map">Location (Google map link)</string>
+    <string name="image_solar_instalation">Images of the site for solar installation from different directions (East, South, West, and North)</string>
+    <string name="indicative_load">Indicative Load details are enclosed in Annexure A</string>
+    <string name="energy_assessment">Energy Assessment Inputs in Annexure B</string>
+    <string name="obstruction">Obstruction Specifics in annexure C</string>
+    <string name="upload_document_image">Upload your document image"</string>
+    <string name="image_should_be_in_jpeg">Image should be in JPEG or PNG format &amp; size should not be larger than 5 MB</string>
+    <string name="change_document">CHANGE DOCUMENT</string>
+
+    ///////////>>>>>>>>>>>>DETAILS OF CONNECTED LOAD>>>>>>>>>>>>>>>>>>>>>//////////////
+    <string name="connected_load_cat">Connected Load (Category)</string>
+    <string name="connected_load_name">Name</string>
+    <string name="connected_wattage">Wattage (Watts)</string>
+    <string name="connected_quantity">Quantity (in numbers)</string>
+    <string name="connected_during_day">Operational Hours during DAY (6am to 6pm)</string>
+    <string name="connected_during_night">Operational Hours during Night (6pm to 6am)</string>
+    <string name="isIt_critacal_load">Is it critical load?</string>
+    <string name="load_type">Load Type</string>
+    <string name="energing_rating">Energy Rating</string>
+    <string name="year_of_installation">Year of Installation</string>
+
+
+    <string name="inputs_energy_assessment">Inputs for Energy Assessment</string>
+    <string name="fuels_used">Fuels used for generating steam water heating</string>
+    <string name="diesel">Diesel</string>
+    <string name="natural_gas">Natural Gas</string>
+    <string name="electricity">Electricity</string>
+    <string name="for_almost_all">For almost all</string>
+    <string name="for_some">For some</string>
+    <string name="very_few">Very few</string>
+
+    <string name="total_build_area">Total Built up area of the facility(Sq.m)</string>
+    <string name="total_no_building">Total number of buildings</string>
+    <string name="total_no_floors">Total number of floors in the building</string>
+    <string name="total_no_windows">Total number of windows in each floor</string>
+    <string name="total_installed_ac">Total Installed capacity of AC (Tonne)</string>
+    <string name="estimated_hot_water">Estimated hot water consumption per day(Litres)</string>
+    <string name="availabilty_thermostatic">Availability of thermostatic radiator control for air conditioning?</string>
+    <string name="fan_speed">Are there variable speed drives for controlling the fan speed?</string>
+    <string name="bulbs">Are there incandescent bulbs / lighting which are older than 5 years ?</string>
+    <string name="electrial_equipments">Do the facility have a maintenance plan to carry out regular maintenance of the electrical Equipments ?</string>
+    <string name="rooms_enough_options">Does the rooms have enough options for day light ?</string>
+    <string name="occupancy_sensors">Does the facility have occupancy sensors ?</string>
+    <string name="proper_labelling">Are there proper labelling on the electrical Equipments?</string>
+    <string name="refrigerators_freezers">Does the regular maintenance of the Refrigerators / Freezers carried out ?</string>
+    <string name="insulated_well">Does the hot water pipes insulated well?</string>
+    <string name="load_in_parallel">Options to switch the lighting load in parallel.</string>
+    <string name="energy_usage">Automated mechanism to monitor the energy usage</string>
+    <string name="efficiency">Awareness to staff on the energy efficiency</string>
+    <string name="circuits">Are there electronic ballast in the lighting circuits ?</string>
+    <string name="humidity">Is the label pasted in public for recommended temperature and humidity ?</string>
+    <string name="rating_refrigerators">Star rating of the Refrigerators</string>
+    <string name="rating_ac">Star Rating of the Air conditioners</string>
+    <string name="how_old_water_pump">How old is the water pump(Years)</string>
+    <string name="electrical_loads">Are there electrical loads in the facility which are 6 years or older ?</string>
+    <string name="hcf_monitor">Do the HCF monitor or track the usage of energy ?</string>
+    <string name="hospital">Does your hospital have an energy conservation program?</string>
+    <string name="central_plant">Have you engaged in Central plant or mechanical equipment upgrades?</string>
+    <string name="low_energy">Have you engaged in Low-energy lighting, such as T-5 or LED? Maximizing day lightning</string>
+    <string name="install_lighting">Have you engaged in Install lighting control systems to minimize energy consumption?</string>
+    <string name="energy_efficient_equip">Install energy efficient equipment?</string>
+    <string name="educate_staff">Do you educate staff,patients and visitors about energy conservation and efficiency strategies/programmes(energy awareness campaigns)?</string>
+    <string name="carbon_features">Low carbon features incorporated in the Hospital</string>
+
+
+
+
+</resources>

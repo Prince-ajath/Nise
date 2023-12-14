@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rootView"
+    app:cardElevation="@dimen/dimen_10dp"
+    android:layout_margin="@dimen/dimen_5dp"
+    app:cardCornerRadius="@dimen/dimen_10dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_5dp"
+        android:layout_marginRight="@dimen/dimen_5dp"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        app:cardCornerRadius="@dimen/dimen_10dp"
+        android:layout_marginBottom="5dp"
+        app:cardElevation="@dimen/dimen_5dp">
+        <RelativeLayout
+            android:id="@+id/cardView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/back_gray"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/backArrow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/back"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/back_gray"
+                        android:padding="10dp"
+                        android:text="@string/details_connected_load"
+                        android:textColor="@color/blue_color"
+                        android:textSize="16sp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+
+                <include layout="@layout/no_data_found" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_20dp">
+                <LinearLayout
+                    android:id="@+id/layout"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:textSize="11sp"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:textColor="@color/blue_color"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:text="Equipment"/>
+                    <View
+                        android:background="@color/GrayCloud"
+                        android:layout_width="1dp"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:layout_height="match_parent"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:textColor="@color/blue_color"
+                        android:text="Quantity"/>
+                    <View
+                        android:background="@color/GrayCloud"
+                        android:layout_width="1dp"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:layout_height="match_parent"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:textColor="@color/blue_color"
+                        android:text="Hours of Use"/>
+                    <View
+                        android:background="@color/GrayCloud"
+                        android:layout_width="1dp"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:layout_height="match_parent"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:textColor="@color/blue_color"
+                        android:text="Load"/>
+                    <View
+                        android:background="@color/GrayCloud"
+                        android:layout_width="1dp"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:layout_height="match_parent"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:textColor="@color/blue_color"
+                        android:text="Total Load"/>
+                    <View
+                        android:background="@color/GrayCloud"
+                        android:layout_width="1dp"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:layout_height="match_parent"/>
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="11sp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="@dimen/dimen_5dp"
+                        android:textColor="@color/blue_color"
+                        android:text="Load Consumption"/>
+
+                </LinearLayout>
+                </HorizontalScrollView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/usersList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <TextView
+                android:id="@+id/addLeadsFAB"
+                android:layout_width="120dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="bottom|end"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="@dimen/dimen_5dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_green_corner_10"
+                android:drawableLeft="@drawable/ic_baseline_add_circle_outline_24"
+                android:drawableTint="@color/white"
+                android:gravity="center_vertical"
+                android:paddingLeft="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:text="Add Load"
+                android:textColor="@color/white" />
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="@android:style/Widget.Holo.ProgressBar.Large"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_centerInParent="true"
+                android:indeterminateTint="@color/purple_200"
+                android:indeterminate="true"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</RelativeLayout>

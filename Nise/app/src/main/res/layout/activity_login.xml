@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_gray"
+    tools:context=".ui.login.LoginActivity">
+
+
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="@color/white"
+       android:layout_centerInParent="true"
+       app:cardBackgroundColor="@color/white"
+       android:layout_margin="5dp"
+       app:cardCornerRadius="10dp"
+       app:cardElevation="10dp">
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+
+         <ImageView
+             android:id="@+id/img"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_alignParentTop="true"
+             android:scaleType="centerInside"
+             android:src="@drawable/heding_log"/>
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_below="@+id/img"
+             android:layout_centerHorizontal="true"
+             android:layout_gravity="center_horizontal"
+             android:layout_marginStart="10dp"
+             android:layout_marginTop="10dp"
+             android:layout_marginEnd="10dp"
+             android:layout_marginBottom="10dp"
+             fontPath="@string/font_bold"
+             android:gravity="center"
+             android:text="Energy Assessment Under National \n Program On Climate &amp; Human Health"
+             android:textColor="@color/black"
+             android:textSize="16sp"
+             tools:ignore="MissingPrefix"/>
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical"
+             android:layout_centerInParent="true">
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:text="@string/login"
+                android:textColor="@color/black"
+                android:textSize="20sp"/>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_marginTop="20dp"
+             android:layout_gravity="center"
+             android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:background="@drawable/bg_border_rectangle"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:hint="@string/email"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                android:textAlignment="viewStart"
+                android:textDirection="locale"
+                android:paddingStart="@dimen/dimen_10dp"
+                android:paddingEnd="@dimen/dimen_10dp"
+                android:textSize="@dimen/text_size_14sp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/edPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:background="@drawable/bg_border_rectangle"
+                app:boxBackgroundMode="filled"
+                android:textColorHint="@color/black"
+                app:endIconTint="@color/black"
+                android:layout_margin="@dimen/dimen_10dp"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:endIconMode="password_toggle">
+
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/etPassWord"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:inputType="textPassword"
+                   android:textColor="@color/black"
+                   android:backgroundTint="@android:color/transparent"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/tvForgetPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:text="Forgot password"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14sp"
+                android:textAlignment="viewEnd"
+                android:textDirection="locale"/>
+
+
+            <TextView
+                android:id="@+id/tvLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:background="@drawable/bg_green_corner_10"
+                android:gravity="center_horizontal"
+                android:padding="@dimen/dimen_10dp"
+                android:text="@string/login"
+                android:textAlignment="center"
+                android:textDirection="locale"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen_10dp"
+                android:layout_marginEnd="@dimen/dimen_10dp"
+                android:layout_marginBottom="@dimen/dimen_10dp"/>
+
+         </LinearLayout>
+
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:gravity="center_horizontal"
+             android:layout_marginBottom="@dimen/dimen_20dp"
+             android:padding="@dimen/dimen_10dp"
+             android:layout_alignParentBottom="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/don_t_have_an_account"
+                android:textColor="@color/black"
+                android:textAlignment="center"
+                android:textDirection="locale"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="@string/signup"
+                android:paddingBottom="@dimen/dimen_10dp"
+                android:paddingTop="@dimen/dimen_10dp"
+                android:paddingRight="@dimen/dimen_10dp"
+                android:id="@+id/tvSignup"
+                android:textAlignment="center"
+                android:textDirection="locale"
+                android:textColor="@color/black"
+                android:textSize="18sp"/>
+         </LinearLayout>
+
+         </LinearLayout>
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="50dp"
+             android:layout_gravity="center"
+             android:text="@string/developed_by"
+             android:layout_alignParentBottom="true"
+             android:layout_centerInParent="true"
+             android:textColor="@color/Gray"
+             android:textAlignment="center"
+             android:textDirection="locale"
+             android:textSize="14sp"/>
+
+         <ProgressBar
+             style="@android:style/Widget.Holo.ProgressBar.Large"
+             android:id="@+id/progressBar"
+             android:indeterminate="true"
+             android:layout_centerInParent="true"
+             android:layout_width="50dp"
+             android:layout_height="50dp"
+             android:indeterminateTint="@color/purple_200"
+             android:visibility="gone" />
+
+      </RelativeLayout>
+
+
+   </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

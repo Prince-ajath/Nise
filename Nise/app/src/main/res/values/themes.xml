@@ -1,0 +1,59 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Main" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+
+        <item name="android:textColor">@color/Gray</item>
+        <item name="android:textColorPrimary">@color/colorGrey</item>
+        <!-- Customize your theme here. -->
+
+        <item name="android:windowContentTransitions">true</item>
+        <item name="colorControlHighlight">@color/shark_light</item>
+        <item name="colorControlNormal">@color/athens_gray</item>
+
+        <item name="android:windowBackground">@color/shark_light</item>
+        <item name="android:listDivider">@color/shuttle_gray</item>
+
+    </style>
+
+    <style name="CustomTextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxStrokeColor">@color/back_gray</item>
+        <item name="hintTextColor">?attr/colorSurface</item>
+        <item name="android:textColorHint">@color/back_gray</item>
+    </style>
+
+    <style name="logout_button" >
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_width">150dp</item>
+        <item name="android:background">@drawable/bg_green_corner_10</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    <style name="AppCompatAlertDialogStyleBig" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowAnimationStyle">@style/AnimationDialogWindow</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.8</item>
+    </style>
+    <style name="AnimationDialogWindow">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">#000</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+
+</resources>

@@ -1,0 +1,600 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            style="@android:style/Widget.Holo.ProgressBar.Large"
+            android:id="@+id/progressBar"
+            android:layout_gravity="center"
+            android:indeterminate="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:indeterminateTint="@color/purple_200"
+            android:visibility="gone" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/back_gray"
+                    android:padding="10dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:text="@string/photographs"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/edittext_border"
+                        android:padding="8dp"
+                        android:text="@string/building_with_board"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+                    <RadioGroup
+                        android:id="@+id/rgBuildBoard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/rbBuildBoardYes"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/yes"/>
+                        <RadioButton
+                            android:id="@+id/rbBuildBoardNo"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/no"/>
+
+                    </RadioGroup>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvUploadFront"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="gone"
+                    android:padding="16dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/bg_dotted_green_stroke"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llUploadFront"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@drawable/bg_blue_stroke_circle"
+                                android:paddingStart="34dp"
+                                android:paddingTop="14dp"
+                                android:paddingEnd="32dp"
+                                android:src="@drawable/ic_document" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/upload_document_image"
+                                android:textColor="@color/blue_color"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/image_should_be_in_jpeg"
+                                android:textColor="@color/colorGray"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlUploadCompleteFront"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            tools:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imgUploadCompletedFront"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="8dp"
+                                android:layout_above="@+id/tvChangeDocumentFront"
+                                android:scaleType="fitCenter"
+                                tools:src="@drawable/ic_document" />
+
+                            <TextView
+                                android:id="@+id/tvChangeDocumentFront"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:padding="10dp"
+                                android:text="@string/change_document"
+                                android:textColor="@color/blue_color"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/edittext_border"
+                        android:padding="8dp"
+                        android:text="@string/electric_meter_connection"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+                    <RadioGroup
+                        android:id="@+id/rgMeterConn"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/rbMeterConnYes"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/yes"/>
+                        <RadioButton
+                            android:id="@+id/rbMeterConnNo"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/no"/>
+
+                    </RadioGroup>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvUploadFrontMc"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="gone"
+                    android:padding="16dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/bg_dotted_green_stroke"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llUploadFrontMc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@drawable/bg_blue_stroke_circle"
+                                android:paddingStart="34dp"
+                                android:paddingTop="14dp"
+                                android:paddingEnd="32dp"
+                                android:src="@drawable/ic_document" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/upload_document_image"
+                                android:textColor="@color/blue_color"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/image_should_be_in_jpeg"
+                                android:textColor="@color/colorGray"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlUploadCompleteFrontMc"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            tools:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imgUploadCompletedFrontMc"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="8dp"
+                                android:layout_above="@+id/tvChangeDocumentFrontMc"
+                                android:scaleType="fitCenter"
+                                tools:src="@drawable/ic_document" />
+
+                            <TextView
+                                android:id="@+id/tvChangeDocumentFrontMc"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:padding="10dp"
+                                android:text="@string/change_document"
+                                android:textColor="@color/blue_color"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/edittext_border"
+                        android:padding="8dp"
+                        android:text="@string/image_proposed_roof"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+                    <RadioGroup
+                        android:id="@+id/rgSolarInsta"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/rbSolarInstaYes"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/yes"/>
+                        <RadioButton
+                            android:id="@+id/rbSolarInstaNo"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/no"/>
+
+                    </RadioGroup>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvUploadSolarInsta"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="gone"
+                    android:padding="16dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/bg_dotted_green_stroke"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llUploadSolarInsta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@drawable/bg_blue_stroke_circle"
+                                android:paddingStart="34dp"
+                                android:paddingTop="14dp"
+                                android:paddingEnd="32dp"
+                                android:src="@drawable/ic_document" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/upload_document_image"
+                                android:textColor="@color/blue_color"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/image_should_be_in_jpeg"
+                                android:textColor="@color/colorGray"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlUploadCompleteSolarInsta"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            tools:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imgUploadComplSolarInsta"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="8dp"
+                                android:layout_above="@+id/tvChangeDocumentSolarInsta"
+                                android:scaleType="fitCenter"
+                                tools:src="@drawable/ic_document" />
+
+                            <TextView
+                                android:id="@+id/tvChangeDocumentSolarInsta"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:padding="10dp"
+                                android:text="@string/change_document"
+                                android:textColor="@color/blue_color"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/edittext_border"
+                        android:padding="8dp"
+                        android:text="@string/image_meter_board"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+                    <RadioGroup
+                        android:id="@+id/rgMeterBoard"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/rbMeterBoardYes"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/yes"/>
+                        <RadioButton
+                            android:id="@+id/rbMeterBoardNo"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/no"/>
+
+                    </RadioGroup>
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvUploadMeterBoard"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:visibility="gone"
+                    android:padding="16dp"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/bg_dotted_green_stroke"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/llUploadMeterBoard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:padding="8dp"
+                            android:visibility="visible">
+
+                            <ImageView
+                                android:layout_width="100dp"
+                                android:layout_height="100dp"
+                                android:background="@drawable/bg_blue_stroke_circle"
+                                android:paddingStart="34dp"
+                                android:paddingTop="14dp"
+                                android:paddingEnd="32dp"
+                                android:src="@drawable/ic_document" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/upload_document_image"
+                                android:textColor="@color/blue_color"
+                                android:textSize="14sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16dp"
+                                android:layout_marginRight="16dp"
+                                android:gravity="center_horizontal"
+                                android:text="@string/image_should_be_in_jpeg"
+                                android:textColor="@color/colorGray"
+                                android:textSize="12sp" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rlUploadComplMeterBoard"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:visibility="visible"
+                            tools:visibility="gone">
+
+                            <ImageView
+                                android:id="@+id/imgUploadComplMeterBoard"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="8dp"
+                                android:layout_above="@+id/tvChangeDocumentMeterBoard"
+                                android:scaleType="fitCenter"
+                                tools:src="@drawable/ic_document" />
+
+                            <TextView
+                                android:id="@+id/tvChangeDocumentMeterBoard"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center_horizontal"
+                                android:padding="10dp"
+                                android:text="@string/change_document"
+                                android:textColor="@color/blue_color"
+                                android:textSize="16sp"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:id="@+id/tvNextPhotographs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_10dp"
+                    android:layout_marginTop="@dimen/dimen_20dp"
+                    android:layout_marginEnd="@dimen/dimen_10dp"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:background="@drawable/bg_green_corner_10"
+                    android:gravity="center_horizontal"
+                    android:padding="@dimen/dimen_10dp"
+                    android:text="@string/next"
+                    android:textAlignment="center"
+                    android:textDirection="locale"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:orientation="vertical" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+</LinearLayout>

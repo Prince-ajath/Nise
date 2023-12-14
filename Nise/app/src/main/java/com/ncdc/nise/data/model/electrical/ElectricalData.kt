@@ -1,0 +1,31 @@
+package com.ncdc.nise.data.model.electrical
+
+data class ElectricalData(
+    val acVoltage: String,
+    val accessElectricity: String,
+    val availableMainLine: String,
+    val averageElectricity: String,
+    val averagePower: String,
+    val conditionWiring: String,
+    val connectionType: String,
+    val createdDate: String,
+    val distributionBoards: String,
+    val econsumption: String,
+    val electricityBill: String,
+    val electricityConnection: String,
+    val energyEfficiency: String,
+    val expansionLoads: String,
+    val id: String,
+    val mcbsUptotwenty: String,
+    val meterconnAvailable: String,
+    val noOfMcbsFiveToTen: String,
+    val noOfMcbsTenUper: String,
+    val outdoorLightings: String,
+    val peakLoadEbill: String,
+    val powerFactor: String,
+    val provisionsExisting: String,
+    val psourceSupply: String,
+    val solarSystem: String,
+    val ssourceSupply: String,
+    val voltage: String
+)
