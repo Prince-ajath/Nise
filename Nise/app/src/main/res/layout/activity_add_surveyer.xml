@@ -20,6 +20,7 @@
             android:layout_height="?attr/actionBarSize"
             android:background="@color/back_gray"
             app:collapseIcon="@color/white"
+            android:theme="@style/MyToolbarStyle"
             app:popupTheme="@style/Theme.Main"
             app:subtitleTextColor="@color/white"
             app:titleTextColor="@color/white">

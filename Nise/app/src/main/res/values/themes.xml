@@ -15,6 +15,9 @@
 
         <item name="android:textColor">@color/Gray</item>
         <item name="android:textColorPrimary">@color/colorGrey</item>
+
+
+
         <!-- Customize your theme here. -->
 
         <item name="android:windowContentTransitions">true</item>
@@ -24,6 +27,9 @@
         <item name="android:windowBackground">@color/shark_light</item>
         <item name="android:listDivider">@color/shuttle_gray</item>
 
+    </style>
+    <style name="MyToolbarStyle" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorSecondary">#333333</item>
     </style>
 
     <style name="CustomTextInputStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">

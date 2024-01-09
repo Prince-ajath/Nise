@@ -219,7 +219,7 @@
                 android:background="@drawable/bg_border_rectangle"
                 android:padding="@dimen/dimen_10dp"
                 android:layout_below="@+id/rlBottom"
-                android:text="DOCUMENT UPLOAD"
+                android:text="DOCUMENT/IMAGE UPLOAD"
                 android:textAlignment="center"
                 android:textColor="@color/blue_color"
                 android:textSize="16sp" />

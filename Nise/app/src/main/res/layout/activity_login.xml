@@ -124,7 +124,6 @@
                 android:layout_marginEnd="@dimen/dimen_10dp"
                 android:layout_marginBottom="@dimen/dimen_10dp"
                 android:text="Forgot password"
-                android:visibility="gone"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size_14sp"
                 android:textAlignment="viewEnd"

@@ -32,6 +32,7 @@ import com.ncdc.nise.data.remote.RetrofitClient
 import com.ncdc.nise.databinding.ActivityAddSurveyerBinding
 import com.ncdc.nise.interfaces.OnClickListener
 import com.ncdc.nise.ui.core.CoreActivity
+import com.ncdc.nise.ui.login.ChangePasswordActivity
 import com.ncdc.nise.ui.login.LoginActivity
 import com.ncdc.nise.ui.register.model.AuthData
 import com.ncdc.nise.ui.register.model.AuthResponse
@@ -90,6 +91,7 @@ class ViewSurveyorActivity : AppCompatActivity(),OnClickListener {
     }
 
 
+
     private fun observeViewModel(){
         binding.progressBar.visibility = View.VISIBLE
         var surveyorId:Int=SharePreference.getIntPref(this@ViewSurveyorActivity,Constants.UserId)
@@ -135,6 +137,12 @@ class ViewSurveyorActivity : AppCompatActivity(),OnClickListener {
 
             R.id.action_logout -> {
                 showDialog()
+            }
+            R.id.changePassword ->{
+
+                val intent=Intent(this@ViewSurveyorActivity, ChangePasswordActivity::class.java)
+                startActivity(intent)
+                finish()
             }
         }
         return super.onOptionsItemSelected(item)

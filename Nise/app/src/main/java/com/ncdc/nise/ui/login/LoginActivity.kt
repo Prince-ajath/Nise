@@ -75,7 +75,11 @@ class LoginActivity : CoreActivity() {
             startActivity(intent)
             finish()
         }
-
+     binding.tvForgetPassword.setOnClickListener {
+         val intent= Intent(this@LoginActivity, ForgotActivity::class.java)
+         startActivity(intent)
+         finish()
+     }
     }
     private fun validateAndLogin() {
         val isValid = validateForm()

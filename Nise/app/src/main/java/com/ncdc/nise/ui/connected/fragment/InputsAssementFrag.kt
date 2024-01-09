@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.RadioButton
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -34,6 +35,7 @@ class InputsAssementFrag: Fragment() {
     var isEdit:Boolean=false
     var isBackPressed=false
     var surveIdEdit:Int=0
+    var rating:String="0.0"
 
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -57,6 +59,20 @@ class InputsAssementFrag: Fragment() {
         binding.tvNextEnergy2.setOnClickListener {
             addDataApi()
 
+        }
+
+        binding.rgAcRating.setOnCheckedChangeListener { _, checkedId ->
+            val radio: RadioButton = view.findViewById(checkedId)
+            when (radio) {
+                binding.rbAcRatingYes -> {
+                    binding.rBACRating.visibility=View.VISIBLE
+                    rating=binding.rBACRating.rating.toString()
+                }
+                binding.rbAcRatingNo -> {
+                    binding.rBACRating.visibility=View.GONE
+                    rating="0.0"
+                }
+            }
         }
         return view
 
@@ -84,6 +100,7 @@ class InputsAssementFrag: Fragment() {
             "Solar water heating","Energy labelling Equipments","Implement sleep mode on computer equipment","Automatic Turning off lighting and equipment when not in use","Energy management systems")
 
        binding.etCarbonFeatures.setAdapter(ArrayAdapter(requireActivity(),R.layout.list_item,cbFeatures))
+
     }
 
     private fun addDataApi(){
@@ -93,12 +110,20 @@ class InputsAssementFrag: Fragment() {
             binding.progressBar.visibility = View.VISIBLE
             binding.ProgressBar1.visibility=View.VISIBLE
             binding.tvNextEnergy2.visibility=View.GONE
+            if(binding.rbAcRatingYes.isChecked){
+                rating=binding.rBACRating.rating.toString()
+            }else if(binding.rbAcRatingNo.isChecked){
+                rating="0.0"
+            }else{
+                rating=binding.rBACRating.rating.toString()
+            }
 
             if (isEdit) {
+
                 inputsAssViewModel.updateInputAssmentApi(
                     SharePreference.getIntPref(requireActivity(), Constants.editSurveyId),
                     binding.rBFreezeRating.rating.toString(),
-                    binding.rBACRating.rating.toString(),
+                    rating,
                     binding.oldWaterPump.editText?.text.toString(),
                     binding.atElectricalLoads.text.toString(),
                     binding.atHcfMonitor.text.toString(),
@@ -115,7 +140,7 @@ class InputsAssementFrag: Fragment() {
                 inputsAssViewModel.updateInputAssmentApi(
                     SharePreference.getIntPref(requireActivity(), Constants.SurveyId),
                     binding.rBFreezeRating.rating.toString(),
-                    binding.rBACRating.rating.toString(),
+                    rating,
                     binding.oldWaterPump.editText?.text.toString(),
                     binding.atElectricalLoads.text.toString(),
                     binding.atHcfMonitor.text.toString(),
@@ -133,7 +158,7 @@ class InputsAssementFrag: Fragment() {
                 inputsAssViewModel.addInputAssmentApi(
                     SharePreference.getIntPref(requireActivity(), Constants.SurveyId),
                     binding.rBFreezeRating.rating.toString(),
-                    binding.rBACRating.rating.toString(),
+                    rating,
                     binding.oldWaterPump.editText?.text.toString(),
                     binding.atElectricalLoads.text.toString(),
                     binding.atHcfMonitor.text.toString(),

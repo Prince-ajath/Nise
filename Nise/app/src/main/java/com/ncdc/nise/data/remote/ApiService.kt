@@ -10,12 +10,12 @@ import com.ncdc.nise.data.model.inputsAssments.GetInputAssments
 import com.ncdc.nise.data.model.spaceavilability.GetSpaceResponse
 import com.ncdc.nise.data.model.vaccineStorage.GetVaccineStorageResponse
 import com.ncdc.nise.ui.load.model.load.LoadItemResponse
+import com.ncdc.nise.ui.login.model.updatePassResponse
 import com.ncdc.nise.ui.register.model.AuthResponse
 import com.ncdc.nise.ui.survey.model.getSurveyDetailsResponse
 import com.ncdc.nise.ui.survey.model.updateResponse
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
-import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.http.Field
 import retrofit2.http.FormUrlEncoded
@@ -60,6 +60,8 @@ interface ApiService {
         @Field("password") sPassword: String?,
 
         ): Call<AuthResponse>
+
+
 
 
 
@@ -554,4 +556,21 @@ interface ApiService {
     fun imageUploadApi(
         @Part("surveyId") surveyId: RequestBody?,
         @Part image:MutableList<MultipartBody.Part>):Call<updateResponse>
+
+    @FormUrlEncoded
+    @POST("paswordUpdate.php")
+    fun updatePassword(
+        @Field("surveyorId") surveyorId:Int?,
+        @Field("oldPassword") oldPassword: String?,
+        @Field("newpassword") newpassword: String?,
+
+        ): Call<updatePassResponse>
+
+    @FormUrlEncoded
+    @POST("forgotPassword.php")
+    fun forgotPassword(
+        @Field("email") emailId: String?,
+        @Field("newpassword") newpassword: String?,
+
+        ): Call<updatePassResponse>
 }

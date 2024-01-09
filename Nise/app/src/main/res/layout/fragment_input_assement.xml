@@ -66,6 +66,45 @@
                         android:stepSize="1"
                         android:numStars="5"/>
                 </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dimen_10dp"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/edittext_border"
+                        android:padding="8dp"
+                        android:text="@string/rating_ac"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="14sp"/>
+                    <RadioGroup
+                        android:id="@+id/rgAcRating"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/edittext_height"
+                        android:gravity="center_vertical"
+                        android:background="@drawable/edittext_border"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:orientation="horizontal">
+                        <RadioButton
+                            android:id="@+id/rbAcRatingYes"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/yes"/>
+                        <RadioButton
+                            android:id="@+id/rbAcRatingNo"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="@string/no"/>
+
+                    </RadioGroup>
+                </androidx.appcompat.widget.LinearLayoutCompat>
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -73,19 +112,20 @@
                     android:background="@drawable/edittext_border"
                     android:orientation="vertical">
 
-                    <androidx.appcompat.widget.AppCompatTextView
+                 <!--   <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:padding="8dp"
                         android:text="@string/rating_ac"
                         android:textColor="@android:color/darker_gray"
-                        android:textSize="14sp"/>
+                        android:textSize="14sp"/>-->
                     <androidx.appcompat.widget.AppCompatRatingBar
                         android:id="@+id/rBACRating"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
+                        android:visibility="gone"
                         android:stepSize="1"
                         android:numStars="5"/>
                 </androidx.appcompat.widget.LinearLayoutCompat>
