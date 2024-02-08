@@ -28,7 +28,7 @@ import retrofit2.http.Query
 interface ApiService {
 
 
-    @FormUrlEncoded
+    /*@FormUrlEncoded
     @POST("add_survey.php")
      fun setSurveyor(
         @Field("sname") sName: String?,
@@ -38,7 +38,7 @@ interface ApiService {
         @Field("stime") sTime: String?,
         @Field("scontactno") sContactNo: String?,
         @Field("sotherinfo") sOtherInfo: String?,
-    ): Call<SurveyorResponse>
+    ): Call<SurveyorResponse>*/
 
     @FormUrlEncoded
     @POST("signup.php")

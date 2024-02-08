@@ -216,24 +216,6 @@ class HealthDetailsFrag :Fragment() {
         binding.atDrinkingWater.setAdapter(ArrayAdapter(requireActivity(), R.layout.list_item, drinkingWaterFacility))
 
 
-      /*  binding.atAM.setOnClickListener {
-             isTimeDialog=false
-            timePickerDialog(isTimeDialog)
-        }*/
-        /*binding.atPM.setOnClickListener {
-            if(!binding.atAM.text.toString().equals("")){
-                isTimeDialog=true
-                timePickerDialog(isTimeDialog)
-            }else{
-                Toast.makeText(
-                    requireActivity(),
-                    "Please Select start time.",
-                    Toast.LENGTH_SHORT
-                ).show()
-            }
-
-
-        }*/
 
         val yearMajorRenov= arrayListOf("No renovation","2022","2021","2020","2019","2018","2017","2016","2015","2014","2013","2012","2011","2010","2009","2008","2007","2006","2005","2004","2003","2002","2001","2000",
         "1999","1998","1997","1996","1995","1994","1993","1992","1991","1990","1989","1988","1987","1986","1985","1984","1983","1982","1981","1980","1979","1978","1976","1975","1974","1973","1972","1971",
@@ -312,97 +294,7 @@ class HealthDetailsFrag :Fragment() {
 
 
 
-  /*  fun timePickerDialog(isTimeDialog:Boolean) {
-        val dialog = Dialog(requireActivity(), R.style.AppCompatAlertDialogStyleBig)
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE)
-        dialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-        dialog.setCancelable(true)
-        dialog.setCanceledOnTouchOutside(true)
-        dialog.setContentView(R.layout.dlg_time_picker)
-        var picker:TimePicker=dialog.findViewById(R.id.datePicker1)
-        var tvOkSetting:TextView = dialog.findViewById(R.id.tvOkSetting)
-        picker.setIs24HourView(true)
-        var am_pm:String = ""
 
-        var isTimeChange:Boolean=true
-        val cldr: Calendar = Calendar.getInstance()
-        val cHour: Int = cldr.get(Calendar.HOUR_OF_DAY)
-        val cMin: Int = cldr.get(Calendar.MINUTE)
-
-        picker.setOnTimeChangedListener { _, hour, minute ->
-            var hour = hour
-            isTimeChange=false
-            when {
-                hour == 0 -> {
-                    hour += 12
-                    am_pm = "AM"
-                }
-
-                hour == 12 -> am_pm = "PM"
-                hour > 12 -> {
-                    hour -= 12
-                    am_pm = "PM"
-                }
-
-                else -> am_pm = "AM"
-            }
-
-            val hours = if (hour < 10) "0" + hour else hour
-            val min = if (minute < 10) "0" + minute else minute
-            val msg = "$hours:$min $am_pm"
-            if(isTimeDialog){
-                binding.atPM.text=msg
-
-
-            }else{
-
-                binding.atAM.text=msg
-
-
-
-            }
-
-        }
-
-        tvOkSetting.setOnClickListener {
-           if(isTimeChange){
-               var hour = cHour
-               when {
-                   hour == 0 -> {
-                       hour += 12
-                       am_pm = "AM"
-                   }
-
-                   hour == 12 -> am_pm = "PM"
-                   hour > 12 -> {
-                       hour -= 12
-                       am_pm = "PM"
-                   }
-
-                   else -> am_pm = "AM"
-               }
-
-               val hours = if (hour < 10) "0" + hour else hour
-               val minuet = if (cMin < 10) "0" + cMin else cMin
-               val msg = "$hours:$minuet $am_pm"
-               if(isTimeDialog){
-                   binding.atPM.text=msg
-
-
-               }else{
-
-                   binding.atAM.text=msg
-
-
-               }
-           }
-            dialog.dismiss()
-        }
-
-
-
-        dialog.show()
-    }*/
 
     private fun updateHealthDetails(surveyId:Int) {
         val isValid = validateForm()
@@ -689,27 +581,7 @@ class HealthDetailsFrag :Fragment() {
                 Toast.LENGTH_SHORT
             ).show()
 
-        }/*else if (binding.atAM.text.isNullOrEmpty() || binding.atAM.text.equals("Strat Time")) {
-            binding.workingHrs.error =null
-            isValid = false
-            binding.atAM.error = "Please Select Strat time in working hours"
-            Toast.makeText(
-                requireActivity(),
-                "Please Select Strat time in working hours",
-                Toast.LENGTH_SHORT
-            ).show()
-
-        } else if (binding.atPM.text.isNullOrEmpty() || binding.atPM.text.equals("End Time")) {
-            binding.atAM.error =null
-            isValid = false
-            binding.atPM.error = "Please Select End time in working hours"
-            Toast.makeText(
-                requireActivity(),
-                "Please Select End time in working hours",
-                Toast.LENGTH_SHORT
-            ).show()
-
-        }*/
+        }
 
         else if (binding.hFNoOFFloors.editText!!.text.isNullOrEmpty()) {
             binding.workingHrs.error =null
@@ -959,99 +831,7 @@ class HealthDetailsFrag :Fragment() {
 
     }
 
-   /* private fun getHealthDetailsApi(surveyIds:Int){
-        binding.progressBar.visibility = View.VISIBLE
-        healthDetailsViewModel.getHealthDetails(surveyIds)
-        healthDetailsViewModel.loading!!.observe(requireActivity()) {
-            if (it) {
-                binding.progressBar.visibility = View.GONE
-            }
-        }
-        healthDetailsViewModel.getHealthResponse!!.observe(requireActivity(), Observer { HealthDetailsResponse->
-            var checkStaus:Boolean=HealthDetailsResponse.status
 
-            if(checkStaus){
-                isClick = true
-                binding.hHDistrictName.visibility=View.GONE
-                binding.tvAddressType.visibility=View.VISIBLE
-                binding.progressBar.visibility = View.GONE
-                var healthData: HealthData =HealthDetailsResponse.data
-                var statId=healthData.stateId
-
-                binding.hFName.editText?.setText(healthData.hfName)
-                binding.hFCategory.setText(healthData.hfCategory,false)
-                binding.hHWelnesCenter.setText(healthData.hfWellnessCentre,false)
-                binding.hFStateName.setSelection(Constants.getIndexOf(healthData.hfStateName))
-                binding.tvAddressType.setText(healthData.hfDistrictName)
-                binding.hHMobileNetwork.setText(healthData.hfMobileNetwork,false)
-                binding.hHDistrictCate.setText(healthData.hfDistrictCate,false)
-                binding.hFAddLocDetails.editText?.setText(healthData.hfAddressLocation)
-                binding.hFPincode.editText?.setText(healthData.hfPincode)
-                binding.hFContactPersonName.editText?.setText(healthData.hfCPName)
-                binding.hFPersonEmail.editText?.setText(healthData.hfCPEmail)
-                binding.hFContactNo.editText?.setText(healthData.hfCPMobile)
-                binding.workingHrs.setText(healthData.hfWorkinghours)
-                binding.atExtendedWorking.setText(healthData.hfEWorkinghours,false)
-                binding.atLogisticfacility.setText(healthData.hfLogisticfacility,false)
-                binding.hFDismainRoad.editText?.setText(healthData.hfMainRoadDist)
-                binding.atapproachFacility.setText(healthData.hfApproachSite,false)
-                binding.nameElectrictyBoard.editText?.setText(healthData.hfEBoardName)
-                binding.hFConsumerId.editText?.setText(healthData.hfConsumerid)
-                binding.hFConsumerName.editText?.setText(healthData.hfCFullName)
-                binding.atnoOfStaff.editText?.setText(healthData.hfTotalStaff)
-                binding.hFNoOfBeds.editText?.setText(healthData.hfNoBeds)
-                binding.atNoOfQuarters.editText?.setText(healthData.hfNoQuraters)
-                binding.hFdisQuarters.editText?.setText(healthData.hfDistanceQuarter)
-                binding.atAmbulance.setText(healthData.hfAmbulance,false)
-                binding.atDrinkingWater.setText(healthData.hfDrinkingWater,false)
-                binding.atAgeOfTheBuilding.editText?.setText(healthData.hfAgeBuilding)
-                binding.athFMajorRenovation.setText(healthData.hfRenovation,false)
-                binding.hFNoOFFloors.editText?.setText(healthData.hfNoFloors)
-                binding.hFNoBuildings.editText?.setText(healthData.hfNoBuilding)
-                binding.hFTempLocation.editText?.setText(healthData.hfTemperature)
-                binding.hFdisComPlace.editText?.setText(healthData.hfDistanceCPlace)
-
-
-
-            }else{
-                isClick = false
-                binding.progressBar.visibility = View.GONE
-                binding.hHDistrictName.visibility=View.VISIBLE
-                binding.tvAddressType.visibility=View.GONE
-                binding.hFName.editText?.setText("")
-                binding.hFCategory.setText("")
-                binding.hHWelnesCenter.setText("")
-                binding.hHMobileNetwork.setText("")
-                binding.hHDistrictCate.setText("")
-                binding.hFAddLocDetails.editText?.setText("")
-                binding.hFPincode.editText?.setText("")
-                binding.hFContactPersonName.editText?.setText("")
-                binding.hFPersonEmail.editText?.setText("")
-                binding.hFContactNo.editText?.setText("")
-                binding.workingHrs.setText("")
-                binding.atExtendedWorking.setText("")
-                binding.atLogisticfacility.setText("")
-                binding.hFDismainRoad.editText?.setText("")
-                binding.atapproachFacility.setText("")
-                binding.nameElectrictyBoard.editText?.setText("")
-                binding.hFConsumerId.editText?.setText("")
-                binding.hFConsumerName.editText?.setText("")
-                binding.atnoOfStaff.editText?.setText("")
-                binding.hFNoOfBeds.editText?.setText("")
-                binding.atNoOfQuarters.editText?.setText("")
-                binding.hFdisQuarters.editText?.setText("")
-                binding.atAmbulance.setText("")
-                binding.atDrinkingWater.setText("")
-                binding.atAgeOfTheBuilding.editText?.setText("")
-                binding.athFMajorRenovation.setText("")
-                binding.hFNoOFFloors.editText?.setText("")
-                binding.hFNoBuildings.editText?.setText("")
-                binding.hFTempLocation.editText?.setText("")
-                binding.hFdisComPlace.editText?.setText("")
-            }
-        })
-
-    }*/
 
     fun AddAuditApi(surveyId:Int,operationType:String){
         var userId:Int=SharePreference.getIntPref(requireActivity(),Constants.UserId)
